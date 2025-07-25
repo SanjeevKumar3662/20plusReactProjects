@@ -2,6 +2,7 @@
 import Accordion from './components/accordion/Accordion'
 import RandomColor from './components/randomColorGen/RandomColor'
 import StarRating from './components/starRating/StarRating'
+import Slider from './components/slider/Slider'
 
 
 function App() {
@@ -10,7 +11,8 @@ function App() {
     <>
       {/* <Accordion></Accordion> */}
       {/* <RandomColor></RandomColor> */}
-      <StarRating noOfStars={7}></StarRating>
+      {/* <StarRating noOfStars={7}></StarRating> */}
+      <Slider></Slider>
     </>
   )
 }
