@@ -20,7 +20,7 @@ export default function Accordion() {
   }
 
   return (
-    <>
+    <div className="container">
       <h1>Component Accordion</h1>
       <button
         onClick={() => setMode(() => !isSingleMode)}
@@ -64,6 +64,6 @@ export default function Accordion() {
             );
           })
         : "no"}
-    </>
+    </div>
   );
 }
