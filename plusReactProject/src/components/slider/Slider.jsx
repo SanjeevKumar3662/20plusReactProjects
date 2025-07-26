@@ -44,6 +44,7 @@ export default function Slider({ url, limit = 4 }) {
 
   useEffect(() => {
     if (url !== "") fetchImages(url);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [url]);
 
   if (loading) {
@@ -62,15 +63,14 @@ export default function Slider({ url, limit = 4 }) {
         <button onClick={() => onClickImageChange("prev")}>prev</button>
         {images.map((ele, i) => {
           return (
-            <div key={i}>
-              <img
-                className={i === currentSlide ? "show" : "hide"}
-                src={ele.download_url}
-                alt=""
-                height={500}
-                width={500}
-              />
-            </div>
+            <img
+              key={i}
+              className={i === currentSlide ? "show" : "hide"}
+              src={ele.download_url}
+              alt=""
+              height={500}
+              width={500}
+            />
           );
         })}
         <button onClick={() => onClickImageChange("next")}>next</button>
