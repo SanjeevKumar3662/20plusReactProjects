@@ -21,12 +21,12 @@ export default function Accordion() {
 
   return (
     <div className="container">
-      <h1>Component Accordion</h1>
+      <h1>Project 1 : Accordion</h1>
       <button
         onClick={() => setMode(() => !isSingleMode)}
         className="selectBtn"
       >
-        Select
+        {isSingleMode?"Single Select Mode":"Multi Select Mode"}
       </button>
 
       {data && data.length > 0

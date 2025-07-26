@@ -2,7 +2,7 @@ import { useState } from "react";
 
 export default function RandomColor() {
   const [typeOfColor, setTypeOfColor] = useState("hex");
-  const [color, setColor] = useState("#000000");
+  const [color, setColor] = useState("#3A808C");
 
   function randomColorUitility(len) {
     return Math.floor(Math.random() * len);
@@ -32,6 +32,8 @@ export default function RandomColor() {
       className="container"
       style={{ width: "100vw", height: "100vh", background: color }}
     >
+      <h1 style={{color:"white"}}>Project 2 : Random Color Generator</h1>
+
       <button
         onClick={
           typeOfColor === "hex"
@@ -41,8 +43,10 @@ export default function RandomColor() {
       >
         Generate Random Color
       </button>
-      <button onClick={() => setTypeOfColor("hex")}>Create Hex Color</button>
-      <button onClick={() => setTypeOfColor("rgb")}>Create RGB Color</button>
+      <button onClick={() => setTypeOfColor("hex")}>Select Hex Color</button>
+      <button onClick={() => setTypeOfColor("rgb")}>Select RGB Color</button>
+
+      <h2 style={{margin:"40px 0", color:"white"}}>Click Buttons to set color type - {typeOfColor} : {color}</h2>
     </div>
   );
 }

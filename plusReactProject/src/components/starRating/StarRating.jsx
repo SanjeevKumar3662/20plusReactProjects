@@ -19,8 +19,10 @@ export default function StarRating({ noOfStars = 5 }) {
 
   const stars = [...Array(noOfStars)].map((_, i) => i + 1);
   console.log(stars);
-  return (
-    <div className="container">
+  return (<div className="container">
+  <h1>Project 3 : Star Rating  </h1>
+    <div className="starContainer">
+
       {stars.map((ele, i) => {
         return hover > 0 ? (
           <i
@@ -34,9 +36,9 @@ export default function StarRating({ noOfStars = 5 }) {
           </i>
         ) : (
           <i
-            key={i}
-            onClick={() => handleClickStar(ele)}
-            onMouseEnter={() => handleMouseEnter(ele)}
+          key={i}
+          onClick={() => handleClickStar(ele)}
+          onMouseEnter={() => handleMouseEnter(ele)}
             onMouseLeave={() => handleMouseLeave()}
             style={{ color: ele <= rating ? "gold" : "black" }}
           >
@@ -45,5 +47,6 @@ export default function StarRating({ noOfStars = 5 }) {
         );
       })}
     </div>
+        </div>
   );
 }

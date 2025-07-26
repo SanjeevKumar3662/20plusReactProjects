@@ -10,11 +10,11 @@
   /* display: flex; */
   /* justify-content: space-between; */
   /* align-items: center; */
-  border: 1px solid black;
+  /* border: 1px solid black; */
   padding: 10px;
   margin: 10px 0;
   font-size: x-large;
-  background-color: rgba(127, 170, 255, 0.416);
+  /* background-color: rgba(127, 170, 255, 0.416); */
 }
 
 .item div{
