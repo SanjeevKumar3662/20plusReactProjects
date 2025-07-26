@@ -1,17 +1,25 @@
 import { useEffect, useState } from "react";
 import "./slider.css";
 
-export default function Slider({ url, limit=4 }) {
+export default function Slider({ url, limit = 4 }) {
   const [images, setImages] = useState([]);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [errorMsg, setErrorMsg] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  function onClickImageChange(action){
-    if(action === "next"&& currentSlide+1 < images.length){
-      setCurrentSlide(()=>currentSlide+1);
-    }else if(action === "prev" && currentSlide-1 > -1){
-      setCurrentSlide(()=>currentSlide-1);
+  function onClickImageChange(action) {
+    if (action === "next") {
+      if (currentSlide + 1 < images.length) {
+        setCurrentSlide(() => currentSlide + 1);
+      } else {
+        setCurrentSlide(() => 0);
+      }
+    } else if (action === "prev") {
+      if (currentSlide - 1 > -1) {
+        setCurrentSlide(() => currentSlide - 1);
+      } else {
+        setCurrentSlide(() => images.length - 1);
+      }
     }
   }
 
@@ -19,7 +27,9 @@ export default function Slider({ url, limit=4 }) {
     try {
       setLoading(true);
 
-      const response = await fetch(`https://picsum.photos/v2/list?page=1&limit=${limit}`);
+      const response = await fetch(
+        `https://picsum.photos/v2/list?page=1&limit=${limit}`
+      );
       const data = await response.json();
       console.log(data);
 
@@ -43,22 +53,22 @@ export default function Slider({ url, limit=4 }) {
   if (errorMsg !== null) {
     return <div>Error occured ! (errorMsg)</div>;
   }
-// console.log(images[currentSlide].download_url);
+  // console.log(images[currentSlide].download_url);
 
   return (
     <div className="container">
-      {/* <h1>Slider Component</h1> */}
-      <h1>More Projects Comming soon.</h1>
+      <h1>Slider Component</h1>
+      {/* <h1>More Projects Comming soon.</h1> */}
+      <button onClick={() => onClickImageChange("prev")}>prev</button>
       <div className="slider-box">
-        <img
-          src={images[currentSlide] === undefined?"https://picsum.photos/id/0/5000/3333":`${images[currentSlide].download_url}`}
-          alt=""
-          width="500"
-          height="500"
-        />
+        {images.map((ele, i) =>
+          i === currentSlide ? (
+            <img src={ele.download_url} alt="" height={500} width={500} />
+          ) : null
+        )}
+        <div>⚪</div>
       </div>
-      <button onClick={()=>onClickImageChange("prev")}>prev</button>
-      <button onClick={()=>onClickImageChange("next")}>next</button>
+      <button onClick={() => onClickImageChange("next")}>next</button>
     </div>
   );
 }
