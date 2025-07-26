@@ -71,11 +71,21 @@ export default function Slider({ url, limit = 4 }) {
                 width={500}
               />
             </div>
-            
           );
         })}
-
         <button onClick={() => onClickImageChange("next")}>next</button>
+      </div>
+
+      <div className="scrollIndicator">
+        {images.map((ele, i) => {
+          return (
+            <div key={i + 10}>
+              <i style={{ color: i === currentSlide ? "red" : "lightBlue" }}>
+                O
+              </i>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
