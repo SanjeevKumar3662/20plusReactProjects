@@ -58,17 +58,25 @@ export default function Slider({ url, limit = 4 }) {
   return (
     <div className="container">
       <h1>Slider Component</h1>
-      {/* <h1>More Projects Comming soon.</h1> */}
-      <button onClick={() => onClickImageChange("prev")}>prev</button>
       <div className="slider-box">
-        {images.map((ele, i) =>
-          i === currentSlide ? (
-            <img src={ele.download_url} alt="" height={500} width={500} />
-          ) : null
-        )}
-        <div>⚪</div>
+        <button onClick={() => onClickImageChange("prev")}>prev</button>
+        {images.map((ele, i) => {
+          return (
+            <div key={i}>
+              <img
+                className={i === currentSlide ? "show" : "hide"}
+                src={ele.download_url}
+                alt=""
+                height={500}
+                width={500}
+              />
+            </div>
+            
+          );
+        })}
+
+        <button onClick={() => onClickImageChange("next")}>next</button>
       </div>
-      <button onClick={() => onClickImageChange("next")}>next</button>
     </div>
   );
 }
