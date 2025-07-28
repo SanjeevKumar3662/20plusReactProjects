@@ -42,6 +42,7 @@ export default function LoadMoreData() {
 
   return (
     <div className="container">
+      <h1>Project 5 : Load Items from an API</h1>
       <div className="loadMoreData-Container">
         {products && products.length
           ? products.map((ele) => {
