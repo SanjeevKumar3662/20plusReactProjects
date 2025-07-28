@@ -25,7 +25,7 @@ export default function StarRating({ noOfStars = 5 }) {
 
       {stars.map((ele, i) => {
         return hover > 0 ? (
-          <i
+          <button
             key={i}
             onClick={() => handleClickStar(ele)}
             onMouseEnter={() => handleMouseEnter(ele)}
@@ -33,9 +33,9 @@ export default function StarRating({ noOfStars = 5 }) {
             style={{ color: ele <= hover ? "gold" : "black" }}
           >
             ☆
-          </i>
+          </button>
         ) : (
-          <i
+          <button
           key={i}
           onClick={() => handleClickStar(ele)}
           onMouseEnter={() => handleMouseEnter(ele)}
@@ -43,7 +43,7 @@ export default function StarRating({ noOfStars = 5 }) {
             style={{ color: ele <= rating ? "gold" : "black" }}
           >
             ☆
-          </i>
+          </button>
         );
       })}
     </div>

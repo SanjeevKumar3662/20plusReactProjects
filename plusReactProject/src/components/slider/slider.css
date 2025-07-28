@@ -4,20 +4,24 @@ img{
 }
 
 .slider-box {
+  max-width: 600px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  /* border: solid; */
   margin: 10px auto;
   padding: 10px;
-  height: 500px;
-  width: 700px;
+}
+
+.imageContainer img{
+  width: 100%;
+  max-width: 600px; /* optional */
+  margin: 0 auto;
 }
 
 .slider-box button{
-  font-size: 70px;
+  font-size: 2rem;
   border: none;
-  /* height: 50px; */
+  margin: 10px;
   border-radius: 30px;
   background-color: rgba(77, 128, 199, 0.904);
   box-shadow: 2px 2px 10px black;
@@ -33,7 +37,6 @@ img{
 
 .scrollIndicator {
   font-size: 10px;
-
   border-radius: 10px;
   display: flex;
   text-align: center;

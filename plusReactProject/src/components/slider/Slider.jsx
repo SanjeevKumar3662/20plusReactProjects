@@ -63,14 +63,16 @@ export default function Slider({ url, limit = 4 }) {
         <button onClick={() => onClickImageChange("prev")}>⬅</button>
         {images.map((ele, i) => {
           return (
-            <img
-              key={i}
-              className={i === currentSlide ? "show" : "hide"}
-              src={ele.download_url}
-              alt=""
-              height={500}
-              width={500}
-            />
+            <div className="imageContainer">
+              <img
+                key={i}
+                className={i === currentSlide ? "show" : "hide"}
+                src={ele.download_url}
+                alt=""
+                // height={500}
+                // width={500}
+              />
+            </div>
           );
         })}
         <button onClick={() => onClickImageChange("next")}>➡</button>
