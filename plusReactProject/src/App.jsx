@@ -10,10 +10,10 @@ function App() {
 
   return (
     <>
-      {/* <Accordion></Accordion> */}
-      {/* <RandomColor></RandomColor> */}
+      <Accordion></Accordion>
+      <RandomColor></RandomColor>
       <StarRating noOfStars={7}></StarRating>
-      {/* <Slider limit={5}></Slider> */}
+      <Slider limit={5}></Slider>
       <LoadMoreData></LoadMoreData>
     </>
   )
