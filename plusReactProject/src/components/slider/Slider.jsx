@@ -58,9 +58,9 @@ export default function Slider({ url, limit = 4 }) {
 
   return (
     <div className="container">
-      <h1>Slider Component</h1>
+      <h1>Project 4 : Slider Component</h1>
       <div className="slider-box">
-        <i onClick={() => onClickImageChange("prev")}>⬅</i>
+        <button onClick={() => onClickImageChange("prev")}>⬅</button>
         {images.map((ele, i) => {
           return (
             <img
@@ -73,7 +73,7 @@ export default function Slider({ url, limit = 4 }) {
             />
           );
         })}
-        <i onClick={() => onClickImageChange("next")}>➡</i>
+        <button onClick={() => onClickImageChange("next")}>➡</button>
       </div>
 
       <div className="scrollIndicator">
