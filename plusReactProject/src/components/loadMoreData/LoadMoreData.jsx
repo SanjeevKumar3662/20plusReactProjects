@@ -5,6 +5,7 @@ export default function LoadMoreData() {
   const [loading, setLoading] = useState(false);
   const [products, setProducts] = useState([]);
   const [count, setCount] = useState(0);
+  const [disableLoadBtn, setDisableLoadBtn] = useState(false);
 
   async function fetchProducts() {
     try {
@@ -28,6 +29,8 @@ export default function LoadMoreData() {
     fetchProducts();
   }, [count]);
 
+  useEffect(()=>{if(count>=5){setDisableLoadBtn(true)}} , [count]);
+
   if (loading === true) {
     return <div>Loading data ! Please Wait</div>;
   }
@@ -50,7 +53,8 @@ export default function LoadMoreData() {
           : null}
       </div>
       <div className="button-container">
-        <button onClick={() => setCount(() => count + 1)}>Load More</button>
+        <button onClick={() => setCount(() => count + 1)} disabled={disableLoadBtn}>
+          {disableLoadBtn?"Limit Exceeded !!":"Load More"}</button>
       </div>
     </div>
   );
