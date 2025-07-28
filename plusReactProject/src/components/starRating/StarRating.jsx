@@ -18,7 +18,7 @@ export default function StarRating({ noOfStars = 5 }) {
   }
 
   const stars = [...Array(noOfStars)].map((_, i) => i + 1);
-  console.log(stars);
+  // console.log(stars);
   return (<div className="container">
   <h1>Project 3 : Star Rating  </h1>
     <div className="starContainer">
