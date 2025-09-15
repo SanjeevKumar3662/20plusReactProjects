@@ -21,10 +21,10 @@ export default function Accordion() {
 
   return (
     <div className="container">
-      <h1>Project 1 : Accordion</h1>
+      <h1 className="text-3xl">Project 1 : Accordion</h1>
       <button
         onClick={() => setMode(() => !isSingleMode)}
-        className="selectBtn"
+        className=" border-solid border-black border-1 rounded-md p-1"
       >
         {isSingleMode?"Single Select Mode":"Multi Select Mode"}
       </button>
