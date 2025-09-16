@@ -1,29 +1,18 @@
-.container{
+/* .container {
   width: 80vw;
   margin: 3rem auto;
   text-align: center;
   border: solid red;
-  /* align-self: center; */
 }
 
-.item {
-  /* display: flex; */
-  /* justify-content: space-between; */
-  /* align-items: center; */
-  /* border: 1px solid black; */
-  padding: 10px;
-  margin: 10px 0;
-  font-size: x-large;
-  /* background-color: rgba(127, 170, 255, 0.416); */
-}
 
-.item div{
-  /* border: 1px solid; */
+
+.item div {
   padding: 2px;
   margin: 10px 6px;
 }
 .item .title {
-  flex:1;
+  flex: 1;
   border: 1px solid;
   background-color: rgba(198, 101, 103, 0.532);
   border-radius: 10px;
@@ -35,4 +24,4 @@
   font-size: medium;
   background-color: rgba(127, 170, 255, 0.416);
   border-radius: 10px;
-}
+} */
