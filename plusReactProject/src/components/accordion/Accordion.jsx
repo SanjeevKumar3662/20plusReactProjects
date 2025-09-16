@@ -23,7 +23,7 @@ export default function Accordion() {
 
   return (
     <div className="t-container flex flex-col justify-center items-center gap-3">
-      <h1 className="text-3xl">Project 1 : Accordion</h1>
+      <h1 className="text-3xl font-semibold">Project 1 : Accordion</h1>
       <button
         onClick={() =>
           setToggleStatus(() =>
@@ -44,7 +44,7 @@ export default function Accordion() {
                 key={ele.id}
                 className="item gap-5 w-full"
               >
-                <span>{ele.question}</span>
+                <span className="text-xl">{ele.question}</span>
 
                 {(() => {
                   switch (toggleStatus) {
