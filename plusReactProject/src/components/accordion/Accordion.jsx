@@ -30,9 +30,9 @@ export default function Accordion() {
             toggleStatus === "single" ? "multi" : "single"
           )
         }
-        className="border-solid border-1 p-1 rounded-md"
+        className="border-solid border p-1 rounded bg-gray-400"
       >
-        Toggle Button
+        Enable : {toggleStatus === "single" ? "Multi" : "Single"} Select Mode
       </button>
 
       {data &&
@@ -42,7 +42,7 @@ export default function Accordion() {
               <div
                 onClick={() => handleClick(ele.id)}
                 key={ele.id}
-                className="item gap-5"
+                className="item gap-5 w-full"
               >
                 <span>{ele.question}</span>
 
