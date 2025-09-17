@@ -10,12 +10,18 @@ const RandomColor = () => {
 
       let code = "";
       for (let i = 0; i < 6; i++) {
-        code += hexCode[Math.floor(Math.random() * 15)];
-        console.log(code);
+        code += hexCode[Math.floor(Math.random() * 16)];
+        // console.log(code);
       }
       setColor(`#${code}`);
     } else {
-      setColor("green");
+      let code = `rgb(${Math.floor(Math.random() * 256)},${Math.floor(
+        Math.random() * 256
+      )},${Math.floor(Math.random() * 256)})`;
+
+      // console.log(code);
+
+      setColor(code);
     }
   };
 
@@ -39,7 +45,8 @@ const RandomColor = () => {
         <button onClick={handleGenClick} className="btn">
           Generate
         </button>
-      </div>
+      </div >
+      Color Code : {color}
     </div>
   );
 };
