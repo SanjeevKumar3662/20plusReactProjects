@@ -45,8 +45,11 @@ const RandomColor = () => {
         <button onClick={handleGenClick} className="btn">
           Generate
         </button>
-      </div >
+      </div>
+      <div className="text-4xl">
+
       Color Code : {color}
+      </div>
     </div>
   );
 };
