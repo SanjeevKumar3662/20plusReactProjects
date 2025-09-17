@@ -11,4 +11,8 @@
   .t-h1 {
     @apply text-3xl font-semibold text-center;
   }
+
+  .btn {
+    @apply p-1 border m-1 rounded
+  }
 }
