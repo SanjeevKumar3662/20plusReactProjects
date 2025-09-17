@@ -23,7 +23,7 @@ export default function Accordion() {
 
   return (
     <div className="t-container flex flex-col justify-center items-center gap-3">
-      <h1 className="text-3xl font-semibold">Project 1 : Accordion</h1>
+      <h1 className="t-h1">Project 1 : Accordion</h1>
       <button
         onClick={() =>
           setToggleStatus(() =>

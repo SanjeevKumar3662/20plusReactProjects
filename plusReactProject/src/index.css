@@ -1,11 +1,14 @@
 @import "tailwindcss";
 
-@layer components{
-  .t-container{
-    @apply h-max w-[80vw] my-5 mx-auto p-10 border-solid border-3 border-red-600
-
+@layer components {
+  .t-container {
+    @apply h-max w-[80vw] my-5 mx-auto p-10 border-solid border-3 border-red-600;
   }
   .item {
-    @apply gap-2 p-3 border-black border-1 my-1 bg-red-300 flex flex-col justify-center items-center rounded-md
+    @apply gap-2 p-3 border-black border-1 my-1 bg-red-300 flex flex-col justify-center items-center rounded-md;
+  }
+
+  .t-h1 {
+    @apply text-3xl font-semibold text-center;
   }
 }
