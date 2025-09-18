@@ -2,7 +2,7 @@
 
 @layer components {
   .t-container {
-    @apply h-max w-[80vw] my-5 mx-auto p-10 border-solid border-3 border-red-600;
+    @apply h-max w-[80vw] my-5 mx-auto p-10 border-solid border-3 border-red-600 flex flex-col justify-center items-center gap-3;
   }
   .item {
     @apply gap-2 p-3 border-black border-1 my-1 bg-red-300 flex flex-col justify-center items-center rounded-md;
@@ -13,6 +13,6 @@
   }
 
   .btn {
-    @apply p-1 border m-1 rounded
+    @apply p-1 border m-1 rounded;
   }
 }
