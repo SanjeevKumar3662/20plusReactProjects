@@ -26,10 +26,7 @@ const RandomColor = () => {
   };
 
   return (
-    <div
-      className="t-container flex flex-col justify-center items-center gap-3"
-      style={{ backgroundColor: `${color}` }}
-    >
+    <div className="t-container" style={{ backgroundColor: `${color}` }}>
       <h1 className="t-h1">Project 2 : Random Color Generator</h1>
       <div className="">
         Select Color Type
@@ -46,10 +43,7 @@ const RandomColor = () => {
           Generate
         </button>
       </div>
-      <div className="text-4xl">
-
-      Color Code : {color}
-      </div>
+      <div className="text-4xl">Color Code : {color}</div>
     </div>
   );
 };

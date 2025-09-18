@@ -22,7 +22,7 @@ export default function Accordion() {
   }
 
   return (
-    <div className="t-container flex flex-col justify-center items-center gap-3">
+    <div className="t-container ">
       <h1 className="t-h1">Project 1 : Accordion</h1>
       <button
         onClick={() =>
