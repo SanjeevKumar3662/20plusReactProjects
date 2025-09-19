@@ -12,7 +12,7 @@ function App() {
       <Accordion></Accordion>
       <RandomColor></RandomColor>
       <StarRating noOfStars={7}></StarRating>
-      {/* <ImageSlider limit={5}></ImageSlider> */}
+      <ImageSlider limit={5}></ImageSlider>
       <LoadMoreButton></LoadMoreButton>
     </>
   );
