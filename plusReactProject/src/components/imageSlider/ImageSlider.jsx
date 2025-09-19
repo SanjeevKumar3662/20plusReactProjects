@@ -36,22 +36,15 @@ const ImageSlider = ({ limit }) => {
   };
 
   return (
-    <div className="t-container">
+    <div className="t-container p-1">
       <h1 className="t-h1">Project 4 : ImageSlider</h1>
       <h2>No. of Images : {limit}</h2>
-      <div className="flex justify-center items-center">
-        <button
-          className="p-2 m-2 border h-10"
-          onClick={() => handleCurrImage("left")}
-        >
-          left
-        </button>
-
+      <div className="flex justify-center items-center ">
         {images &&
           images.length > 0 &&
           images.map((ele) => {
-            const imgClass = `w-150 h-150 border ${
-              currImg === Number(ele.id) ? "inline" : "hidden"
+            const imgClass = `w-150  border ${
+              currImg === Number(ele.id) ? "" : "hidden"
             }`;
             // console.log(currImg);
             return (
@@ -64,13 +57,22 @@ const ImageSlider = ({ limit }) => {
             );
           })}
 
-        <button
-          className="p-2 m-2 border h-10"
-          onClick={() => handleCurrImage("right")}
-        >
-          right
-        </button>
+       
       </div>
+       <div>
+          <button
+            className="p-2 m-2 border h-10"
+            onClick={() => handleCurrImage("left")}
+          >
+            left
+          </button>
+          <button
+            className="p-2 m-2 border h-10 "
+            onClick={() => handleCurrImage("right")}
+          >
+            right
+          </button>
+        </div>
     </div>
   );
 };
