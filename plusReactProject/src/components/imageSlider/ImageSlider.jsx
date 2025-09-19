@@ -1,61 +1,19 @@
 import { useEffect, useState } from "react";
 
 const ImageSlider = ({ limit }) => {
-  const imgObj = [
-    {
-      id: "0",
-      author: "Alejandro Escamilla",
-      width: 5000,
-      height: 3333,
-      url: "https://unsplash.com/photos/yC-Yzbqy7PY",
-      download_url: "https://picsum.photos/id/0/5000/3333",
-    },
-    {
-      id: "1",
-      author: "Alejandro Escamilla",
-      width: 5000,
-      height: 3333,
-      url: "https://unsplash.com/photos/LNRyGwIJr5c",
-      download_url: "https://picsum.photos/id/1/5000/3333",
-    },
-    {
-      id: "2",
-      author: "Alejandro Escamilla",
-      width: 5000,
-      height: 3333,
-      url: "https://unsplash.com/photos/N7XodRrbzS0",
-      download_url: "https://picsum.photos/id/2/5000/3333",
-    },
-    {
-      id: "3",
-      author: "Alejandro Escamilla",
-      width: 5000,
-      height: 3333,
-      url: "https://unsplash.com/photos/Dl6jeyfihLk",
-      download_url: "https://picsum.photos/id/3/5000/3333",
-    },
-    {
-      id: "4",
-      author: "Alejandro Escamilla",
-      width: 5000,
-      height: 3333,
-      url: "https://unsplash.com/photos/y83Je1OC6Wc",
-      download_url: "https://picsum.photos/id/4/5000/3333",
-    },
-  ];
-  const [images, setImages] = useState(imgObj);
+  const [images, setImages] = useState(null);
   const [currImg, setCurrImg] = useState(0);
-  // const url = `https://picsum.photos/v2/list?page=1&limit=${limit}`;
+  const url = `https://picsum.photos/v2/list?page=1&limit=${limit}`;
 
-  // useEffect(() => {
-  //   const fetchImages = async () => {
-  //     const res = await fetch(url);
-  //     const data = await res.json();
-  //     console.log(data);
-  //     setImages(data);
-  //   };
-  //   fetchImages();
-  // }, []);
+  useEffect(() => {
+    const fetchImages = async () => {
+      const res = await fetch(url);
+      const data = await res.json();
+      // console.log(data);
+      setImages(data);
+    };
+    fetchImages();
+  }, [url]);
 
   const handleCurrImage = (action) => {
     if (action === "left") {
@@ -83,7 +41,7 @@ const ImageSlider = ({ limit }) => {
       <h2>No. of Images : {limit}</h2>
       <div className="flex justify-center items-center">
         <button
-          className="p-2 border h-10"
+          className="p-2 m-2 border h-10"
           onClick={() => handleCurrImage("left")}
         >
           left
@@ -95,7 +53,7 @@ const ImageSlider = ({ limit }) => {
             const imgClass = `w-150 h-150 border ${
               currImg === Number(ele.id) ? "inline" : "hidden"
             }`;
-            console.log(currImg);
+            // console.log(currImg);
             return (
               <img
                 className={imgClass}
@@ -107,7 +65,7 @@ const ImageSlider = ({ limit }) => {
           })}
 
         <button
-          className="p-2 border h-10"
+          className="p-2 m-2 border h-10"
           onClick={() => handleCurrImage("right")}
         >
           right
