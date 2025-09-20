@@ -10,10 +10,10 @@ const MenuList = ({ label, children, level }) => {
   };
   // console.log(toOpen);
   return (
-    <div className=" p-3 flex flex-col gap-1" key={label}>
+    <div className="  flex flex-col gap-1" key={label}>
       <span>
         <button
-          className="border p-2 bg-red-400"
+          className=" p-2 bg-red-400 rounded-xl"
           onClick={(e) => handleClickMenu(e)}
         >
           Level:{level}
