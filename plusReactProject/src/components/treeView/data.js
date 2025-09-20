@@ -1,4 +1,4 @@
-export const menus = [
+export const menu = [
   {
     label: "Home",
     to: "/",
@@ -57,4 +57,4 @@ export const menus = [
   },
 ];
 
-export default menus;
+export default menu;
