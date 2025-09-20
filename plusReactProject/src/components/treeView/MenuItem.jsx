@@ -11,7 +11,7 @@ const MenuItem = ({ label, children, level }) => {
     <div
       className="  flex flex-col gap-2 my-2 
       "
-      style={{ marginLeft: `${level * 50}px` }}
+      style={{ marginLeft: `${level * 1}rem` }}
       onClick={(e) => handleClickMenu(e)}
     >
       <span className={` bg-blue-400 p-3 rounded-xl`}>
