@@ -6,17 +6,15 @@ import ImageSlider from "./components/imageSlider/ImageSlider";
 import LoadMoreButton from "./components/loadMoreButton/LoadMoreButton";
 import TreeView from "./components/treeView/TreeView";
 
-
 function App() {
   return (
     <>
-      {/* <Accordion></Accordion>
+      <Accordion></Accordion>
       <RandomColor></RandomColor>
       <StarRating noOfStars={7}></StarRating>
-      <ImageSlider limit={5}></ImageSlider> 
+      <ImageSlider limit={5}></ImageSlider>
       <LoadMoreButton></LoadMoreButton>
-      */}
-      <TreeView/>
+      <TreeView />
     </>
   );
 }
