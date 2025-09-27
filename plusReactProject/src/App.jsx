@@ -5,6 +5,7 @@ import StarRating from "./components/starRating/StarRating";
 import ImageSlider from "./components/imageSlider/ImageSlider";
 import LoadMoreButton from "./components/loadMoreButton/LoadMoreButton";
 import TreeView from "./components/treeView/TreeView";
+import QrCodeMaker from "./components/qrCodeMaker/QrCodeMaker";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <ImageSlider limit={5}></ImageSlider>
       <LoadMoreButton></LoadMoreButton>
       <TreeView />
+      <QrCodeMaker/>
     </>
   );
 }
