@@ -6,6 +6,7 @@ import ImageSlider from "./components/imageSlider/ImageSlider";
 import LoadMoreButton from "./components/loadMoreButton/LoadMoreButton";
 import TreeView from "./components/treeView/TreeView";
 import QrCodeMaker from "./components/qrCodeMaker/QrCodeMaker";
+import DarkMode from "./components/darkMode/DarkMode";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <LoadMoreButton></LoadMoreButton>
       <TreeView />
       <QrCodeMaker/>
+      <DarkMode/>
     </>
   );
 }
